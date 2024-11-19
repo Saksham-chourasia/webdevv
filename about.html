@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="bg-gray-800 text-white fixed w-full shadow-lg z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="index.html" class="text-2xl font-bold">Home</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="about.html" class="hover:text-yellow-400 text-yellow-400">About Us</a></li>
+                    <li><a href="blogs.html" class="hover:text-yellow-400">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="bg-gray-100 py-24 pt-36">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Our Team</h2>
+            <p class="text-gray-600 mb-12 max-w-3xl mx-auto">
+                We are writers and developers, dedicated to delivering insightful and engaging content.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-member bg-white rounded-lg shadow-md p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="./conda/gitu.png" alt="Team Member 1">
+                    <h3 class="text-xl font-semibold">Spiderman</h3>
+                    <p class="text-gray-600 text-sm">Content Creator</p>
+                    <p class="text-gray-500 text-sm mt-2">tech and lifestyle</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="team-member bg-white rounded-lg shadow-md p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="gitu.png" alt="Team Member 2">
+                    <h3 class="text-xl font-semibold">Bob The Builder</h3>
+                    <p class="text-gray-600 text-sm">Web Developer</p>
+                    <p class="text-gray-500 text-sm mt-2">fast, responsive, and user-friendly web-sites</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="team-member bg-white rounded-lg shadow-md p-6">
+                    <img class="w-32 h-32 rounded-full mx-auto mb-4" src="gitu.png" alt="Team Member 3">
+                    <h3 class="text-xl font-semibold">Chhole Bhature</h3>
+                    <p class="text-gray-600 text-sm">Designer</p>
+                    <p class="text-gray-500 text-sm mt-2">visuals and user experiences</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

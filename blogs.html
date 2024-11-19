@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="bg-gray-800 text-white fixed w-full shadow-lg z-50">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="index.html" class="text-2xl font-bold">Home</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="about.html" class="hover:text-yellow-400">About Us</a></li>
+                    <li><a href="blogs.html" class="hover:text-yellow-400 text-yellow-400">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog List Section -->
+    <section class="py-24 pt-36">
+        <div class="container mx-auto">
+            <h2 class="text-4xl font-bold mb-8 text-center">Create Blog</h2>
+            <!-- Create Blog Button -->
+            <div class="text-center mb-8">
+                <button id="createBlogButton" 
+                        class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600 transition">
+                    Create Blog
+                </button>
+            </div>
+
+            <!-- Blog List -->
+            <div id="blogList" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="blog-card bg-white p-4 shadow-md">
+                    <h3 class="text-2xl font-bold mb-2">Where do blackholes come from</h3>
+                    <p class="text-gray-600">In the silent space, there is one place...</p>
+                    <a href="https://r.search.yahoo.com/_ylt=Awr1SSZMsjxnEakJ6mnnHgx.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Nj/RV=2/RE=1732059853/RO=10/RU=https%3a%2f%2fwww.astronomy.com%2fscience%2fhow-do-black-holes-form%2f%23%3a~%3atext%3dThe%2520most%2520well-understood%2520black%2520holes%2520are%2520created%2520when%2cmore%2520massive%2529%2520as%2520they%2520consume%2520matter%2520near%2520them./RK=2/RS=QlfNEhR3o_Mdpz.bARMFsx42uGQ-" class="text-blue-500 mt-4 block">Read More</a>
+                </div>
+                <div class="blog-card bg-white p-4 shadow-md">
+                    <h3 class="text-2xl font-bold mb-2">"Why?"- the best word</h3>
+                    <p class="text-gray-600">A single question can change lives...</p>
+                    <a href="https://r.search.yahoo.com/_ylt=Awr1QHl1sjxnTx0KXiHnHgx.;_ylu=Y29sbwMEcG9zAzEEdnRpZAMEc2VjA3Ny/RV=2/RE=1732059894/RO=10/RU=https%3a%2f%2fwww.waterford.org%2fblog%2fhow-to-change-the-world%2f/RK=2/RS=JPmVXj4fa0v5hi.spqbDI6fRdho-" class="text-blue-500 mt-4 block">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Select Create Blog Button
+        const createBlogButton = document.getElementById('createBlogButton');
+        const blogList = document.getElementById('blogList');
+
+        // Add Event Listener
+        createBlogButton.addEventListener('click', function () {
+            // Ask user for blog details
+            const blogTitle = prompt('Enter the title of your blog:');
+            if (!blogTitle) return;
+
+            const blogContent = prompt('Enter the content of your blog:');
+            if (!blogContent) return;
+
+            // Create a new blog card
+            const blogCard = document.createElement('div');
+            blogCard.className = 'blog-card bg-white p-4 shadow-md';
+
+            // Set the inner HTML for the blog card
+            blogCard.innerHTML = `
+                <h3 class="text-2xl font-bold mb-2">${blogTitle}</h3>
+                <p class="text-gray-600">${blogContent.slice(0, 50)}...</p>
+                <a href="index.html" class="text-blue-500 mt-4 block">Read More</a>
+            `;
+
+            // Append the blog card to the blog list
+            blogList.appendChild(blogCard);
+        });
+    </script>
+</body>
+
+</html>
